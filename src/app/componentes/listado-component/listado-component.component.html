@@ -1,0 +1,19 @@
+<h3 class="text-center">Listado Gifs</h3>
+<hr>
+
+<div class="row" style="margin-left: 15px; margin-right: 15px">
+    <input type="text" 
+    placeholder="Buscar"
+    (keyup.enter)="buscar(terminoBusqueda.value)"
+    #terminoBusqueda>
+</div>
+
+<hr>
+
+<div class="row">
+  <app-lista-personajes [personajes]="personajes"></app-lista-personajes>
+</div>
+
+<div class="row">
+  <app-paginas-gifs></app-paginas-gifs>
+</div>

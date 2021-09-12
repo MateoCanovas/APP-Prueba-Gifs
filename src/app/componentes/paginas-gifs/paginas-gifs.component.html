@@ -1,0 +1,35 @@
+<div class="row">
+    <div *ngFor="let gif of resultados" 
+      class="col-md-3 col-sm-6 animate__animated animate__fadeIn">
+          
+          <div class="card" style="margin-bottom: 20px;">
+              <img [src]="gif.image" 
+              [alt]="gif.title"  class="card-img-top">
+              <div class="card-body">
+                  <p class="card-text">
+                    <strong>
+                      {{gif.title | titlecase}}
+                    </strong>
+                  </p>
+              </div>
+          </div>
+  
+      </div>
+  </div>
+  
+  <div class="row" style="padding: 10px;" *ngIf="resultados.length > 0">
+    <div class="col">
+      <button class="btn btn-outline-dark" 
+      style="float: right" (click)="changePage(-1)"
+      #prev>
+        Prev
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-outline-dark"
+      (click)="changePage(1)"
+      #next>
+        Next
+      </button>
+    </div>
+  </div>

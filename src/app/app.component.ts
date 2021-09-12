@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Gif } from './interfaces/gifs.interface';
+import { PersonajeDB } from './interfaces/Personaje-db';
+import { DragonBallServiceService } from './services/dragon-ball-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DragonBall';
+ 
 }

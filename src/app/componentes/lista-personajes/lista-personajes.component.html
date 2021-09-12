@@ -1,0 +1,18 @@
+<div class="row" *ngIf="personajes.length > 0">
+<strong><h5>Selecciona una de las imagenes inferiores para mostrar más gifs realcionados</h5></strong>
+
+</div>
+
+<div class="row">
+  <ul class="list-group list-group-horizontal">
+
+    <li class="list-group-item zoom" *ngFor="let personaje of personajes">
+      <!-- <a [href]="personaje.image" (click)="nada()"> -->
+        <div class="selector" (click)="mostrarGifs(personaje.name)">
+          <img class="img-thumbnail" [src]="personaje.image" alt="{{personaje.name}}" style="max-height: 160px;">
+        </div>
+      <!-- </a>  -->
+    </li>
+  
+  </ul>
+</div>
